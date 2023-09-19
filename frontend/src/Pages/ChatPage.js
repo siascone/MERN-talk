@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+// import axios from 'axios';
 
 const ChatPage = () => {
     const [chats, setChats] = useState([])
 
     const fetchChats = async () => {
-        const {data} = await axios.get('/api/chat')
+        // const {data} = await axios.get('/api/chat')
 
-        setChats(data);
+        // setChats(data);
     }
 
     useEffect(() => {
