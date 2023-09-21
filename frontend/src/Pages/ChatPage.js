@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { ChatState } from '../Context/ChatProvider';
 import { Box } from '@chakra-ui/react'
 import SideDrawer from '../Components/Miscellaneous/SideDrawer';
