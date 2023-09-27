@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 import {
     Box, Tooltip, Button, Text, Menu, MenuButton, MenuList, MenuItem, MenuDivider, Drawer, DrawerBody,
-    DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButto, useDisclosure, Input, useToast, Spinner} from '@chakra-ui/react'
+    useDisclosure, Input, useToast, Spinner} from '@chakra-ui/react'
 import { BellIcon, ChevronDownIcon } from '@chakra-ui/icons'
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+import { Avatar } from '@chakra-ui/react'
 import { ChatState } from '../../Context/ChatProvider'
 import ProfileModal from './ProfileModal'
 import { useHistory } from 'react-router-dom'
@@ -53,7 +52,7 @@ const SideDrawer = () => {
             }
 
             const {data} = await axios.get(`/api/user?search=${search}`, config)
-            console.log(data)
+            // console.log(data)
             setLoading(false)
             setSearchResult(data)
         } catch (error) {

@@ -56,7 +56,7 @@ const Signup = () => {
                 setLoading(false)
             })
             .catch (err => {
-                console.log(err)
+                // console.log(err)
                 setLoading(false)
             })
         } else {
@@ -122,7 +122,7 @@ const Signup = () => {
 
             history.push('/chats')
         } catch (error) {
-            console.log(error)
+            // console.log(error)
             toast({
                 title: "Error Occured :(",
                 description: error.response.data.message,

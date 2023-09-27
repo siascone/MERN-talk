@@ -22,7 +22,7 @@ const MyChats = ({ fetchAgain }) => {
         }
 
         const { data } = await axios.get("/api/chat", config)
-        console.log(data)
+        // console.log(data)
         setChats(data)
     } catch (error) {
       toast({
@@ -40,6 +40,8 @@ const MyChats = ({ fetchAgain }) => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")))
     fetchChats();
   }, [fetchAgain])
+
+  if (!loggedUser) return null
 
   return (
     <Box
