@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ChatState } from '../Context/ChatProvider';
 import { Box } from '@chakra-ui/react'
 import SideDrawer from '../Components/Miscellaneous/SideDrawer';
@@ -10,7 +10,9 @@ const ChatPage = () => {
     const { user } = ChatState()
     const [fetchAgain, setFetchAgain] = useState(false)
 
-
+    useEffect(() => {
+        console.log(user)
+    }, [])
 
     return (
         <div style={{width: "100%"}}>

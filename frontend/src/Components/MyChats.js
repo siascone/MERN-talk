@@ -7,6 +7,8 @@ import ChatLoading from './ChatLoading'
 import { getSender } from '../config/ChatLogics'
 import GroupChatModal from './Miscellaneous/GroupChatModal'
 
+// START VIDEO #13 NEXT
+
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState()
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState()
